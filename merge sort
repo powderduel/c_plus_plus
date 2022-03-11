@@ -1,0 +1,30 @@
+#inlcude<iosetream>
+using namespace std;
+template<class IT,class T>
+
+void MSORT(IT b,IT e){
+if(e-b<=1)return;
+IT m=b+(e-b)/2;
+vector<T>a0(b,m),a1(m,e);
+MSORT(a0.begin(),a0.end());
+MSORT(a1.begin(),a1.end());
+IT ab=a0.begin(),ae=a0.end(),ap=ab;
+IT bb=a1.begin9),be=a1.end(),bp=bb;
+IT cb=b,cp=b;ce=e;
+while(ap!=ae&&bp!=be){
+     if(*ap>*bp){*cp++=*bp++;}
+else if(*ap<*bp){*cp++=*ap++;}
+else {*cp++=*ap++;*cp++=*bp++;}
+}
+while(ap!=ae)*cp++=*ap++;
+while(bp!=be)*cp++=*bp++;
+
+}
+
+int main(){
+int n;cin>>n;
+vector<int>a(n);
+for(auto&v:a)cin>>v;
+MSORT(a.begin(),a.end());
+
+}
