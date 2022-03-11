@@ -1,4 +1,4 @@
-#inlcude<iosetream>
+#include<bits/stdc++.h>
 using namespace std;
 template<class IT,class T>
 
@@ -9,8 +9,8 @@ vector<T>a0(b,m),a1(m,e);
 MSORT(a0.begin(),a0.end());
 MSORT(a1.begin(),a1.end());
 IT ab=a0.begin(),ae=a0.end(),ap=ab;
-IT bb=a1.begin9),be=a1.end(),bp=bb;
-IT cb=b,cp=b;ce=e;
+IT bb=a1.begin(),be=a1.end(),bp=bb;
+IT cb=b,cp=b,ce=e;
 while(ap!=ae&&bp!=be){
      if(*ap>*bp){*cp++=*bp++;}
 else if(*ap<*bp){*cp++=*ap++;}
